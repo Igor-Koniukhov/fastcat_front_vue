@@ -1,10 +1,15 @@
 <template>
   <div class="products">
+    <ProductDrawer
+      :product = "product"
+      :active="active.product_drawer" />
+
     <div class="main-wrapper-content">
       <section class="first-section restaurant-list">
         <div class="content">
           <div class="container">
             <div class="row" id="input">
+
               <item-product
                 class=" col-lg-4 col-md-6"
                 v-for="product in products"
@@ -20,16 +25,22 @@
 </template>
 <script>
   import ItemProduct from '../components/ItemProduct'
+  import ProductDrawer from '../components/ProductDrawer'
 
   export default {
     name: 'Products',
-    components: { ItemProduct },
-    props: {
-      products: {
-        type: Array,
-        required: true
-      },
-      product: null,
+    components: { ItemProduct, ProductDrawer },
+    data() {
+      return {
+        products: {
+          type: Array,
+          required: true
+        },
+        product: null,
+        active:{
+          product_drawer:false
+        },
+      }
     },
     methods: {
       generateItems () {
@@ -41,7 +52,7 @@
       },
       viewProduct(product){
         this.product = product
-        console.log(this.product)
+        this.active.product_drawer = true
       }
 
     },
