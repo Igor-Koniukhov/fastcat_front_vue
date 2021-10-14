@@ -2,7 +2,8 @@
   <div class="products">
     <ProductDrawer
       :product = "product"
-      :active="active.product_drawer" />
+      :active="active.product_drawer"
+    v-on:close-product-drawer="productDrawerClose()"/>
 
     <div class="main-wrapper-content">
       <section class="first-section restaurant-list">
@@ -53,6 +54,9 @@
       viewProduct(product){
         this.product = product
         this.active.product_drawer = true
+      },
+      productDrawerClose(){
+        this.active.product_drawer = false
       }
 
     },
