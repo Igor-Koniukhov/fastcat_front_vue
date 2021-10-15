@@ -41,6 +41,7 @@
           required: true
         },
       },
+      p
     },
   }
 </script>

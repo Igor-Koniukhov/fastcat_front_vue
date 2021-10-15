@@ -8,9 +8,13 @@ import App from './App.vue'
 import router from './router'
 import Headers from "./components/Headers";
 import NuvBar from "./components/NuvBar";
+import ProductDrawer from "./components/product/ProductDrawer";
+import ItemProduct from "./components/product/ItemProduct";
 import store from './store'
 Vue.component('headers', Headers).default
 Vue.component('nuv-bar', NuvBar).default
+Vue.component('product-drawer', ProductDrawer).default
+Vue.component('item-product', ItemProduct).default
 
 Vue.use(Vuex)
 Vue.use(BootstrapVue)

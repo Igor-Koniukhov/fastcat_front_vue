@@ -80,13 +80,10 @@
     right: 270px;
     top: 0px;
     z-index: -1;
-
   }
-
 
   .header-support {
     display: none;
-    background-color: red;
   }
 
 </style>

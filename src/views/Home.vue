@@ -42,12 +42,19 @@
                     <button type="submit " class="btn btn-in-line m-auto">Choose</button>
                   </div>
                 </div>
-
               </div>
-
             </div>
           </form>
         </div>
+      </div>
+      <div class="row">
+        <Suppliers
+          class=" col-lg-4 col-md-6 mb-3"
+          v-for="supplier in suppliers"
+          :supplier="supplier"
+          :key="supplier.id"
+          v-on:get-supplier_id="GetSupplierID($event)"
+        />
       </div>
 
       <section class="second-section">
@@ -125,11 +132,32 @@
 </template>
 
 <script>
-  // @ is an alias to /src
+ import Suppliers from "../components/suppliers/Suppliers";
 
 
   export default {
     name: 'Home',
+    components:{Suppliers},
+    data() {
+      return {
+        suppliers: {
+          type: Array,
+          required: true,
+        },
+      }
+    },
+    methods:{
+      generateSuppliers() {
+        fetch('http://localhost:8090/suppliers-json')
+          .then((resp) => resp.json())
+          .then((data) => {
+            this.suppliers = data
+          })
+      },
 
+    },
+    created() {
+      this.generateSuppliers()
+    }
   }
 </script>
