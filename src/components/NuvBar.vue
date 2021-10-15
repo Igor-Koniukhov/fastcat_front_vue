@@ -41,9 +41,9 @@
           </button>
         </form>
       </div>
-      <div class="header__cart cart" tabindex="0">
-        <div class="cart__text navbar-brand"><span class="cart__quantity">0</span>
-        </div>
+      <div class="header__cart cart">
+        <router-link class="dropdown-item  cart__text navbar-brand" to="/cart">
+          <span class="cart__quantity" id="cart-quantity">0</span></router-link>
 
       </div>
     </div>
@@ -58,5 +58,52 @@
 </script>
 
 <style scoped>
+  .navbar-nav{
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  .cart {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 40px 19px;
+    transition: background-color 0.3s;
+    z-index: 100;
+  }
+  .cart__quantity {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    transform: translateY(-50%);
+    min-width: 16px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    padding: 0;
+    color: var(--color-dark);
+    font-size: 12px;
+    z-index: 5;
+  }
+  .cart:before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(/../../img/trolley.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+  .bg-yellow-custom {
+    background-color: #ffc107;
+  }
 
 </style>

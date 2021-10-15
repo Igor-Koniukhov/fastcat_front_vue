@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-roll-up roll-up">
-    <img class="roll-up-button" src="../../public/img/rocket-2-go.png" alt="roll-up">
+    <img class="roll-up-button" src="/../img/rocket-2-go.png" alt="roll-up">
   </div>
 </template>
 
