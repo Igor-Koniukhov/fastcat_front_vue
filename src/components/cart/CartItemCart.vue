@@ -20,6 +20,18 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss">
+  .cart-item{
+    width: 90%;
+    margin: 5%;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px gray;
+    padding: 10px;
+    text-align: left;
+    .header{
+      display:flex;
+      justify-content: space-around;
+    }
+  }
 
 </style>
