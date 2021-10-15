@@ -25,8 +25,8 @@
   </div>
 </template>
 <script>/* eslint-disable */
-import ItemProduct from '../components/ItemProduct'
-import ProductDrawer from '../components/ProductDrawer'
+import ItemProduct from '../components/product/ItemProduct'
+import ProductDrawer from '../components/product/ProductDrawer'
 
 export default {
   name: 'Products',

@@ -26,7 +26,7 @@
 </template>
 
 <script>/* eslint-disable */
-  import Ingredients from './Ingredients'
+  import Ingredients from "./Ingredients";
   export default {
     name: 'ItemProduct',
     components: {

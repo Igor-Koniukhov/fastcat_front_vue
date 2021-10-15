@@ -2,7 +2,7 @@
   <div class="">
     <div class="container">
       <h1>This is an cart page</h1>
-      <CartItemcCart
+      <CartItemCart
       v-for="product in products"
       :key="product.id"
       :product="product"
@@ -20,7 +20,7 @@
           CartItemCart
       },
       computed:{
-          items(){
+          products(){
             return this.$store.getters.cartItems
           }
       }
