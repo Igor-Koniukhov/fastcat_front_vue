@@ -10,6 +10,7 @@
         <div class="content">
           <div class="container">
             <div class="row" id="input">
+
               <item-product
                 class=" col-lg-4 col-md-6"
                 v-for="product in products"
@@ -48,7 +49,6 @@ export default {
         .then((resp) => resp.json())
         .then((data) => {
           this.products = data
-
         })
     },
     viewProduct(product) {

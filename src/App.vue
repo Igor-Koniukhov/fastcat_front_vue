@@ -47,11 +47,30 @@
       --gutter: 20px;
     }
 
+    html {
+      box-sizing: border-box;
+    }
+
     * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
       vertical-align: top;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+      padding: 0;
     }
 
     a {
@@ -69,6 +88,7 @@
     ul {
       list-style-type: none;
     }
+
 
     .product__btn,
     .order__btn,
@@ -148,6 +168,15 @@
     padding: unset;
   }
 
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+
+  }
+
+
   p {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -180,6 +209,7 @@
     height: 100%;
 
   }
+
 
   .dancing {
     font-family: 'Dancing Script', cursive;
@@ -322,6 +352,7 @@
 
   }
 
+
   .btn:hover {
     background-color: #6078f1;
     transition: background-color 0.3s ease-in-out;
@@ -331,6 +362,7 @@
     opacity: 0.4;
     pointer-events: none;
   }
+
 
   .btn.custom-search {
     border: unset;

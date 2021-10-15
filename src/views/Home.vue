@@ -132,8 +132,7 @@
 </template>
 
 <script>
- import Suppliers from "../components/suppliers/Suppliers";
-
+  import Suppliers from "../components/suppliers/Suppliers";
 
   export default {
     name: 'Home',
