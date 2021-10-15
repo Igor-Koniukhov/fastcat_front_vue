@@ -8,8 +8,11 @@
         <p><span class="supplier-id" hidden>{{product.suppliers_id}}</span><span></span></p>
         <span class="product__term">type:{{product.type}}:</span>
         <p class="ingredients">
-          <ingredients v-for="( ingredient, index) in product.ingredients" :ingredient="ingredient"
-                       :key="index"></ingredients>
+          <ingredients
+            v-for="( ingredient, index) in product.ingredients"
+            :ingredient="ingredient"
+            :key="index"/>
+
         </p>
       </div>
       <div class="product__switch image-switch">
@@ -22,10 +25,8 @@
   </div>
 </template>
 
-<script>
-  import { mapActions } from 'vuex'
+<script>/* eslint-disable */
   import Ingredients from './Ingredients'
-
   export default {
     name: 'ItemProduct',
     components: {
@@ -41,15 +42,6 @@
         },
       },
     },
-    methods: {
-      ...mapActions('basket', ['addProduct']),
-      logIng () {
-        console.log(this.product.ingredients)
-      }
-    },
-    mounted () {
-      this.logIng()
-    }
   }
 </script>
 

@@ -10,14 +10,7 @@
       props:{
         ingredient: String,
       },
-      methods:{
-          dataIng(){
-            console.log(this.ingredient, "this is ingr-ts")
-          }
-      },
-      mounted() {
-          this.dataIng()
-      }
+
     }
 </script>
 

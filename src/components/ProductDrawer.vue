@@ -25,8 +25,8 @@
             <div class="amount-in-cart col"><b>Total:</b>{{product_total}}</div>
           </div>
           <div class="button-container row">
-            <button class="remove button-in-cart col">Remove</button>
-            <button class="add button-in-cart col">Add</button>
+            <button class="remove button-in-cart col" @click="removeFromCart()">Remove</button>
+            <button class="add button-in-cart col" @click="addToCart()">Add</button>
           </div>
           <p class="description">{{ product.description}}</p>
         </div>
@@ -36,15 +36,24 @@
   </div>
 </template>
 
-<script>
+<script>/* eslint-disable */
+
   import Ingredients from './Ingredients'
 
   export default {
     components: { Ingredients },
     props: ['product', 'active'],
+    methods:{
+      addToCart(){
+        this.$store.commit('addToCart', this.product)
+      },
+      removeFromCart(){
+        this.$store.commit('removeFromCart', this.product)
+      }
+    },
     computed: {
       product_total () {
-        return 56.00
+        return this.$store.getters.productQuantity(this.product)
       }
     }
   }

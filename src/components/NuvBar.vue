@@ -27,13 +27,11 @@
               <li><router-link class="dropdown-item log-in" to="/cart">Cart</router-link></li>
               <li><router-link class="dropdown-item log-in" to="#">Log In</router-link></li>
               <li><router-link class="dropdown-item" to="/registration">Sing Up</router-link></li>
-
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contacts">Contacts</a>
           </li>
-
         </ul>
         <form class="d-flex">
           <input class="form-control me-2 form-control-custom-search" type="search" placeholder="Search"
@@ -46,20 +44,7 @@
       <div class="header__cart cart" tabindex="0">
         <div class="cart__text navbar-brand"><span class="cart__quantity">0</span>
         </div>
-        <div class="cart-content">
-          <div class="cart-content__bottom">
-            <div class="cart-content__fullprice">
-              <span>Sum:</span>
-              <span class="fullprice">568</span>
-            </div>
-            <button class="cart-content__btn btn" data-graph-path="modal-cart"
-                    data-graph-animation="fadeInUp">Go to cart
-            </button>
-          </div>
-          <form class="cart-content__list" data-simplebar>
 
-          </form>
-        </div>
       </div>
     </div>
   </nav>

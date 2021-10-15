@@ -8,6 +8,7 @@ import App from './App.vue'
 import router from './router'
 import Headers from "./components/Headers";
 import NuvBar from "./components/NuvBar";
+import store from './store'
 Vue.component('headers', Headers).default
 Vue.component('nuv-bar', NuvBar).default
 
@@ -24,5 +25,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

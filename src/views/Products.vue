@@ -1,9 +1,9 @@
 <template>
   <div class="products">
     <ProductDrawer
-      :product = "product"
+      :product="product"
       :active="active.product_drawer"
-    v-on:close-product-drawer="productDrawerClose()"/>
+      v-on:close-product-drawer="productDrawerClose()"/>
 
     <div class="main-wrapper-content">
       <section class="first-section restaurant-list">
@@ -24,47 +24,47 @@
     </div>
   </div>
 </template>
-<script>
-  import ItemProduct from '../components/ItemProduct'
-  import ProductDrawer from '../components/ProductDrawer'
+<script>/* eslint-disable */
+import ItemProduct from '../components/ItemProduct'
+import ProductDrawer from '../components/ProductDrawer'
 
-  export default {
-    name: 'Products',
-    components: { ItemProduct, ProductDrawer },
-    data() {
-      return {
-        products: {
-          type: Array,
-          required: true
-        },
-        product: null,
-        active:{
-          product_drawer:false
-        },
-      }
-    },
-    methods: {
-      generateItems () {
-        fetch('http://localhost:8090/products-json')
-          .then((resp) => resp.json())
-          .then((data) => {
-            this.products = data
-          })
+export default {
+  name: 'Products',
+  components: {ItemProduct, ProductDrawer},
+  data() {
+    return {
+      products: {
+        type: Array,
+        required: true
       },
-      viewProduct(product){
-        this.product = product
-        this.active.product_drawer = true
+      product: null,
+      active: {
+        product_drawer: false
       },
-      productDrawerClose(){
-        this.active.product_drawer = false
-      }
-
+    }
+  },
+  methods: {
+    generateItems() {
+      fetch('http://localhost:8090/products-json')
+        .then((resp) => resp.json())
+        .then((data) => {
+          this.products = data
+        })
     },
-    created () {
-      this.generateItems()
+    viewProduct(product) {
+      this.product = product
+      this.active.product_drawer = true
+    },
+    productDrawerClose() {
+      this.active.product_drawer = false
     }
 
+  },
+  created() {
+    this.generateItems()
   }
+
+}
 
 
 </script>

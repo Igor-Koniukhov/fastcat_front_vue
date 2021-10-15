@@ -483,7 +483,7 @@ ul {
     padding: 0;
     color: var(--color-dark);
     font-size: 12px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .is-open {
